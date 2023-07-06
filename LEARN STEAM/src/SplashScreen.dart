@@ -1,48 +1,42 @@
-import 'package:flutter/material.dart';
-
-
-class SplashscreenWidget extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-    return Container(
-      width: 428,
-      height: 926,
-      decoration: BoxDecoration(
+ Container(
+    width: 428,
+    height: 926,
+    decoration: BoxDecoration(
         borderRadius : BorderRadius.only(
         topLeft: Radius.circular(20),
         topRight: Radius.circular(20),
         bottomLeft: Radius.circular(20),
         bottomRight: Radius.circular(20),
         ),
-      color : Color.fromRGBO(255, 255, 255, 1),
+    color : Color.fromRGBO(255, 255, 255, 1),
   ),
-      child: Stack(
-        children: <Widget>[
-          Positioned(
-        top: 0,
-        left: -13,
-        child: Container(
-      decoration: BoxDecoration(
+    child: Stack(
+    children: <Widget>[
+        Positioned(
+    top: 0,
+    left: -13,
+    child: Container(
+    decoration: BoxDecoration(
           
   ),
-      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 0),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        
-        children: <Widget>[
-          Container(
-      width: 103.5,
-      height: 44,
-      decoration: BoxDecoration(
+    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 0),
+    child: Row(
+    mainAxisSize: MainAxisSize.min,
+    
+    children: <Widget>[
+        Container(
+        width: 103.5,
+        height: 44,
+        decoration: BoxDecoration(
           
   ),
-      child: Stack(
-        children: <Widget>[
-          Positioned(
-        top: 16,
-        left: 34.5,
-        child: Container(
-      decoration: BoxDecoration(
+    child: Stack(
+    children: <Widget>[
+        Positioned(
+    top: 16,
+    left: 34.5,
+    child: Container(
+    decoration: BoxDecoration(
           
   ),
       padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
@@ -144,7 +138,4 @@ null,
       ),
         ]
       )
-    );
-          }
-        }
-        
+    )

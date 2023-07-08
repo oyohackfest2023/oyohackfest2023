@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  /* background-color: #2E2E47; */
+}
+
+.bcg_lott {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: all 0s ease-in-out;
+  background-color: black;
+}
+.world_lott {
+  position: absolute;
+  height: 30vw;
+  width: 30vw;
+  bottom: 50px;
+  left: 50px;
+  visibility: visible;
+  /* border: red solid 2px; */
+}
+
+.sign_in_panel {
+  position: absolute;
+  background: white;
+  width: 410px;
+  height: 520px;
+  bottom: 0px;
+  right: 50px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  height: 35px;
+  width: 35px;
+}
+.large_text {
+  position: absolute;
+  top: 15px;
+  left: 60px;
+  color: white;
+  font-weight: 500;
+  font-size: 2vw;
+}
+.login_header {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  color: black;
+  font-weight: 600;
+  font-size: 3vw;
+}
+.login_sub_header {
+  position: absolute;
+  top: 80px;
+  left: 30px;
+  color: black;
+  font-weight: 500;
+  font-size: 1vw;
+}
+.login_sub_header_hover:hover {
+  opacity: 0.6;
+  transition: all 0.3s ease-in-out;
+}
+.login_sub_header_hover {
+  color: #8e45c5;
+}
+
+#email {
+  position: absolute;
+  top: 120px;
+  left: 30px;
+  padding: 10px;
+  height: 40px;
+  width: calc(100% - 60px);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+#email:focus {
+  border: 2px solid #8e45c5;
+  transition: all 0.1s ease-in-out;
+  outline: none;
+}
+
+#password {
+  position: absolute;
+  top: 170px;
+  left: 30px;
+  padding: 10px;
+  height: 40px;
+  width: calc(100% - 60px);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+#password:focus {
+  border: 2px solid #8e45c5;
+  transition: all 0.1s ease-in-out;
+  outline: none;
+}
+#toggle_password {
+  position: absolute;
+  top: 177px;
+  right: 40px;
+  color: #6c6c6c;
+  font-size: 2vw;
+  transition: all 0.3s ease-in-out;
+}
+.login_btn {
+  position: absolute;
+  top: 260px;
+  left: 30px;
+  padding: 10px;
+  height: 40px;
+  width: calc(100% - 60px);
+  border-radius: 5px;
+  background: #8e45c5;
+}
+.forgot_password {
+  position: absolute;
+  top: 220px;
+  right: 30px;
+  color: #8e45c5;
+  font-weight: 500;
+  font-size: 1vw;
+}
+.forgot_password:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+.login_btn_text {
+  position: absolute;
+  font-weight: 500;
+  font-size: 1vw;
+  color: white;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.login_btn:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+.log_in_h2 {
+  position: absolute;
+  width: calc(100% - 60px);
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+  left: 30px;
+  right: 30px;
+  top: 310px;
+}
+
+.log_in_h2 span {
+  background: #fff;
+  padding: 0 10px;
+  font-weight: 400;
+  font-size: 1vw;
+}
+.g_btn {
+  position: absolute;
+  top: 350px;
+  left: 30px;
+  padding: 2.5px;
+  height: 40px;
+  width: calc(100% - 60px);
+  border-radius: 5px;
+  background: #4285f4;
+}
+.g_btn:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+.g_btn_box {
+  position: absolute;
+  padding: 2.5px;
+  height: 35px;
+  width: 35px;
+  border-radius: 5px;
+  background: white;
+}
+.g_logo {
+  position: absolute;
+  /* padding: 5px; */
+  height: 30px;
+  width: 30px;
+}
+.g_login_btn_text {
+  position: absolute;
+  font-weight: 500;
+  font-size: 1vw;
+  color: white;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.a_btn {
+  position: absolute;
+  top: 410px;
+  left: 30px;
+  /* padding: 2.5px; */
+  height: 40px;
+  width: calc(100% - 60px);
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.a_btn:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+#a_logo {
+  position: absolute;
+  color: black;
+  top: 5px;
+  height: 30px;
+  width: 30px;
+  left: 5px;
+}
+.a_login_btn_text {
+  position: absolute;
+  font-weight: 500;
+  font-size: 1vw;
+  color: black;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.pivacy_policy_terms_and_condition {
+  position: absolute;
+  top: 460px;
+  left: 30px;
+  right: 30px;
+  color: black;
+  font-weight: 500;
+  font-size: 1vw;
+}
+/* Screen size refractored */
+
+@media screen and (max-width: 770px) {
+  .log_in_h2 span {
+    font-size: 2vw;
+  }
+  #toggle_password {
+    font-size: 4vw;
+    transition: all 0.3s ease-in-out;
+  }
+  .large_text {
+    font-size: 4vw;
+    transition: all 0.3s ease-in-out;
+  }
+  .sign_in_panel {
+    width: calc(100% - 50px);
+    right: 25px;
+    height: 85%;
+  }
+  .world_lott {
+    visibility: hidden;
+  }
+
+  .login_header {
+    font-size: 5vw;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .login_sub_header {
+    font-size: 2vw;
+    transition: all 0.3s ease-in-out;
+  }
+  .forgot_password {
+    font-size: 2vw;
+    transition: all 0.3s ease-in-out;
+  }
+  .login_btn_text {
+    font-size: 2vw;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .g_login_btn_text {
+    font-size: 2vw;
+    transition: all 0.3s ease-in-out;
+  }
+  .a_login_btn_text {
+    font-size: 2vw;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .large_text {
+    font-size: 6vw;
+    transition: all 0.3s ease-in-out;
+  }
+  .log_in_h2 span {
+    font-size: 3vw;
+  }
+  #toggle_password {
+    font-size: 6vw;
+    transition: all 0.3s ease-in-out;
+  }
+  .login_header {
+    font-size: 7vw;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .login_sub_header {
+    font-size: 3vw;
+    transition: all 0.3s ease-in-out;
+  }
+  .forgot_password {
+    font-size: 3vw;
+    transition: all 0.3s ease-in-out;
+  }
+  .login_btn_text {
+    font-size: 3vw;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .g_login_btn_text {
+    font-size: 3vw;
+    transition: all 0.3s ease-in-out;
+  }
+  .a_login_btn_text {
+    font-size: 3vw;
+    transition: all 0.3s ease-in-out;
+  }
+}

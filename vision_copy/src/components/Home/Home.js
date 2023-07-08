@@ -7,15 +7,24 @@ import cancelButton from "../../assets/cancel_button.svg";
 import Lottie from "lottie-react";
 import FingerTyping from "../../lottie-animations/fingerstyping.json";
 import { click } from "@testing-library/user-event/dist/click";
+import { Oval } from "react-loader-spinner";
+
 function Home() {
   const [dynamicText, setDynamicText] = React.useState("");
   const currentIndexRef = React.useRef(0);
   const [dropdown, setDropdown] = React.useState(false);
   const [showForm, setShowForm] = React.useState(false);
+  const [isIframeLoaded, setIsIframeLoaded] = React.useState(false);
+  const handleIframeLoad = () => {
+    console.log("loaded");
+
+    return setIsIframeLoaded(true);
+  };
   function handleDropdown() {
     setDropdown((prev) => !prev);
   }
-  var txt = "Get started by creating an account";
+
+  var txt = "Tech Career Compass: Your Path to Success Unveiled";
   var speed = 25;
   // let changeIcon = document.querySelector("#open_menu");
   // let sidebar = document.querySelector("#sidebar");
@@ -66,24 +75,6 @@ function Home() {
 
         {!showForm && (
           <div className={styles.info_left}>
-            {/* <lottie-player
-            src="../lottie-animations/finger_typing.json"
-            background="transparent"
-            speed="1"
-            loop
-            autoplay
-          ></lottie-player> */}
-            {/* <Player
-            src="https://lottie.host/?file=8baf0f81-a1b8-4521-a0bd-b02b7070173d/s41DoRnFSG.json"
-            className="player"
-            loop
-            autoplay
-          /> */}
-            {/* <Lottie
-            animationData={FingerTyping}
-            className={styles.lottie_player}
-          /> */}
-
             <div className={styles.large_text_div}>
               <p className={styles.large_text}>
                 Tech Career Compass: Your Path to Success Unveiled
@@ -103,7 +94,7 @@ function Home() {
                 }}
                 className={styles.getstarted}
               >
-                Get Started
+                Try Demo
               </button>
             </div>
           </div>
@@ -148,17 +139,37 @@ function Home() {
           </div>
         </div>
         {showForm && (
-          <iframe
-            className={styles.form}
-            src="https://docs.google.com/forms/d/e/1FAIpQLSeVE1mlibJsmN0MmuLC0l9zv5Wh-2zOWVExhDwl7dTmYaivwA/viewform?embedded=true"
-            // width="640"
-            // height="1505"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-          >
-            Loading…
-          </iframe>
+          <>
+            {/* {!isIframeLoaded && (
+              <Oval
+                height={80}
+                width={80}
+                color="#4fa94d"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+                ariaLabel="oval-loading"
+                secondaryColor="#4fa94d"
+                strokeWidth={2}
+                strokeWidthSecondary={2}
+              />
+            )} */}
+            {/* {!isIframeLoaded && ( */}
+            <iframe
+              className={styles.form}
+              src="https://docs.google.com/forms/d/e/1FAIpQLSeVE1mlibJsmN0MmuLC0l9zv5Wh-2zOWVExhDwl7dTmYaivwA/viewform?embedded=true"
+              // width="640"
+              // height="1505"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              // width="40px"
+              // onLoad={console.log("loaded")}
+            >
+              Loading…
+            </iframe>
+            {/* )} */}
+          </>
         )}
         <div className={styles.horizontal_bottom_menu}>
           <nav className={styles.horizontal_bottom_nav}>
@@ -205,48 +216,13 @@ function Home() {
         )}
 
         <img className={styles.logo} src="/primitivelogo.png" />
-        <Lottie animationData={FingerTyping} className={styles.lottie_player} />
 
-        <p className={styles.large_text_header}>Primitive</p>
+        <p className={styles.large_text_header}>Vision</p>
         <div className={styles.large_text_div}>
           <p className={styles.large_text} id="mobile_get_started">
-            {dynamicText}
+            Tech Career Compass: Your Path to Success Unveiled{" "}
           </p>
-        </div>
-
-        <div className={styles.auth_btns}>
-          <div className={styles.log_in_btn}>
-            <Link style={{ textDecoration: "none" }} to={"/login"}>
-              {" "}
-              <p className={styles.log_in_btn_text}>Log in</p>
-            </Link>
-          </div>
-
-          <div className={styles.sign_up_btn}>
-            <Link to={"/signup"}>
-              {" "}
-              <p className={styles.sign_up_btn_text}>Sign Up</p>
-            </Link>
-          </div>
-        </div>
-
-        <div className={styles.mobile_download_text}>
-          <p className={styles.large_text}>Download now</p>
-        </div>
-
-        <div className={styles.mobile_download_img}>
-          <img className={styles.g_btn_mobile} src="google_download_img.png" />
-          <img className={styles.a_btn_mobile} src="apple_download_img.png" />
-        </div>
-
-        <div className={styles.slideshow_container}>
-          <img className={styles.mySlides} src="iphone14.png" />
-
-          <div className={styles.alldot}>
-            <span className={styles.dot}></span>
-            <span className={styles.dot}></span>
-            <span className={styles.dot}></span>
-          </div>
+          <div className={styles.small_text_div}></div>
         </div>
       </div>
     </>
